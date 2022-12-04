@@ -640,6 +640,11 @@ justify-content: space-between;
   align-items: center;
   justify-content: center;
   fill: #000000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+  fill:var(--brand-color)
 }
 .is-hidden {
   opacity: 0;
@@ -663,6 +668,7 @@ justify-content: space-between;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: #757575;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-wrapper {
   position: relative;
@@ -714,6 +720,7 @@ justify-content: space-between;
 
 .modal-comment {
   margin-bottom: 20px;
+  padding: 12px 16px;
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -726,8 +733,7 @@ justify-content: space-between;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 .modal-comment::placeholder {
   font-size: 12px;
@@ -739,8 +745,6 @@ justify-content: space-between;
 .label-text {
   display: flex;
   align-items: center;
-  /* padding-top: 20px;
-  padding-bottom: 30px; */
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
@@ -758,7 +762,9 @@ justify-content: space-between;
   align-items: center;
   justify-content: center;
   fill: transparent;
-
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .label-link {
   color: var(--brand-color);
@@ -767,7 +773,7 @@ justify-content: space-between;
 .modal-agree:checked + .label-text span {
   background-color: var(--brand-color);
   border: 2px solid transparent;
-  fill: #ffffff;
+  fill: #ffffff
 }
 
 .modal-submit {
@@ -794,8 +800,8 @@ justify-content: space-between;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .btn-submit:hover,
-  .btn-submit:focus {
+  .modal-submit:hover,
+  .modal-submit:focus {
     background-color: #188ce8;
   }
  
@@ -818,6 +824,7 @@ justify-content: space-between;
       width: 100%;
       height: 50px;
       background: transparent;
+      padding: ;
       outline: none;
       font-size: 16px;
       line-height: 1.25;
